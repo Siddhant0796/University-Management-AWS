@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+body
+{   background-position:center;
+    background-image:url('http://localhost/Disp/Image.jpg');
+    background-attachment: fixed;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=reset]:hover {
+    background-color: #45a049;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 150px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+
+
+
+<script type="text/javascript">
+function ValidationEvent() {
+// Storing Field Values In Variables
+var First_Name = document.getElementById("First_Name").value;
+var Last_Name = document.getElementById("Last_Name").value;
+var SU_ID = document.getElementById("SU_ID").value;
+var Email = document.getElementById("Email").value;
+var Stud_Department = document.getElementById("Stud_Department").value;
+var GPA = document.getElementById("GPA").value;
+var Stud_Course = document.getElementById('Stud_Course');
+}
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<form name="form" onsubmit="return ValidationEvent()" action="php_insert1.php"  method="post"  enctype="multipart/form-data">
+<h2 align="center">Student</h2>
+<label>First Name :</label>
+<input id="First_Name" name="First_Name" placeholder="Please Enter First Name" type="text"><br>
+<label>Last Name :</label>
+<input id="Last_Name" name="Last_Name" placeholder="Please Enter Last Name" type="text"><br>
+<label>SU ID :</label>
+<input id="SU_ID" name="SU_ID" placeholder="Enter Student SU ID" type="text"><br>
+<label>Email</label>
+<input id="Email" name="Email" placeholder="Email Address" type="text"><br>
+<label>Student Department</label>
+<input id="Stud_Department" name="Stud_Department" placeholder="Stud_Department" type="text">
+<label>GPA</label>
+<input id="GPA" name="GPA" placeholder="Enter GPA" type="text"><br>
+<label>Course Name</label>
+<input id="Stud_Course" name="Stud_Course" placeholder="Course" type="text"><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<div align="center">
+<input type="button" value="Professor Sign In" onClick="location.href='http://52.90.158.69/task.html';">
+</div>
+<br>
+</form>
+</div>
+</div>
+</body>
+</html>
